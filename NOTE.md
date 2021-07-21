@@ -115,3 +115,63 @@ False and False # False
 # if <condition> :
     # when condition is true
 ```
+
+# Falsy value
+
+`None`, `0`, `0.0`, `""`, `b""`, `[]`, `()`, `{}`
+
+# pass
+
+```python
+number = 0
+
+if number == 0:
+    pass
+else :
+    print("hi")
+```
+
+# 파괴적 함수외 비파괴적 함수
+
+- `append()`, `insert()`, `extend()`
+- `LIST.append(ELEMENT)` : ELEMENT가 리스트 가장 뒤에 추가 됨
+- `LIST.insert(ELEMENT, INDEX)` : ELEMENT가 해당 INDEX 에 추가 됨
+- `LIST.extend([ELEMENT1, ELEMENT2..])` : ELEMENT가 리스트에 추가 됨 (반드시 `[]`로 포함)
+
+```python
+a=[1,2,3]
+a.append(4)
+print(a) # [1, 2, 3, 4]
+a.insert(4,1)
+print(a) # [1, 2, 3, 4, 1] --> 파괴적 함수
+
+b=[]
+b.extend([5,6,7])
+print(b) # [5, 6, 7]
+
+
+c="hello"
+c.upper() # HELLO
+print(c) # hello --> 비파괴적 함수
+```
+
+# 리스트 제거
+
+- `del a[1]` : a의 1번째 요소 제거
+- `a.pop(1)` : a의 1번째 요소 제거
+- `d.remove(300)` : 300 이라는 요소 제거
+
+```python
+d = [1,2,3,4,5,6,7]
+del d[1] # 1번째 제거
+print(d) # [1, 3, 4, 5, 6, 7]
+d.pop(1)
+print(d) # [1, 4, 5, 6, 7]
+```
+
+# For
+
+```python
+for ELEMENT in LIST:
+    CODE
+```
